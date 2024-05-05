@@ -1,8 +1,8 @@
 package designpattern.creational.factorymethod;
 
 import designpattern.creational.factorymethod.dynamicfactory.DynamicShapeFactory;
-import org.springframework.web.bind.annotation.RestController;
 import designpattern.creational.factorymethod.enumfactorymethod.EnumFactory;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FactoryMethodController {
