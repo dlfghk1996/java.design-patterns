@@ -1,6 +1,6 @@
 package designpattern.behavioral.strategy.validator;
 
-import jakarta.xml.bind.ValidationException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +15,11 @@ public class ValidationContext<T> {
         strategies.add(strategy);
     }
 
-    public void validate(T input) throws ValidationException {
+    public void validate(T input) throws Exception {
         for (ValidationStrategy<T> strategy : strategies) {
             strategy.validate(input);
         }
+
+
     }
 }

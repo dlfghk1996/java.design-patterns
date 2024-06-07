@@ -1,9 +1,5 @@
 package designpattern.behavioral.strategy.validator;
 
-import designpattern.behavioral.strategy.basic.ConcreteStrategyAdd;
-import designpattern.behavioral.strategy.basic.ConcreteStrategyMultiply;
-import designpattern.behavioral.strategy.basic.ConcreteStrategySubtract;
-import jakarta.xml.bind.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +24,7 @@ public class ValidationStrategyController {
             validationContext.validate(username);
             validationContext.validate(email); // 유효성 검사 실패
             System.out.println("All validations passed successfully.");
-        } catch (ValidationException e) {
+        } catch (Exception e) {
             System.out.println("Validation error: " + e.getMessage());
         }
     }
